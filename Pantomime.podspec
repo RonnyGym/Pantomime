@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
     Supports Master and Media playlist manifest files.
                        DESC
 
-  s.homepage     = "https://github.com/thomaschristensen/Pantomime"
+  s.homepage     = "https://github.com/RonnyGym/Pantomime.git"
   s.license      = "MIT"
   s.author       = { "Thomas Christensen" => "tchristensen@nordija.com" }
   s.ios.deployment_target = "8.0"
   s.tvos.deployment_target = "9.0"
   s.osx.deployment_target = "10.10"
-  s.source       = { :git => "https://github.com/thomaschristensen/Pantomime.git", :tag => "0.1.4" }
+  s.source       = { :git => "https://github.com/RonnyGym/Pantomime.git", :tag => "0.1.4" }
   s.source_files  = "sources"
 end
