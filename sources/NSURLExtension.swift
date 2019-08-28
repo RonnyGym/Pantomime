@@ -8,15 +8,15 @@ import Foundation
 // Extend the NSURL object with helpers
 
 public extension URL {
-    /**
-        Replaces the last path component of the URL with the path component and returns a new URL or nil.
-
-        - Parameter pathComponent: path component to replace last path component with
-
-        - Returns: A new URL object or nil
-     */
-    func URLByReplacingLastPathComponent(_ pathComponent: String) -> URL? {
-         let tmpurl = self.deletingLastPathComponent()
-				 return tmpurl.appendingPathComponent(pathComponent)
-    }
+  /**
+   Replaces the last path component of the URL with the path component and returns a new URL or nil.
+   
+   - Parameter pathComponent: path component to replace last path component with
+   
+   - Returns: A new URL object or nil
+   */
+  func URLByReplacingLastPathComponent(_ pathComponent: String) -> URL? {
+    let tmpurl = self.deletingLastPathComponent()
+    return tmpurl.appendingPathComponent(pathComponent)
+  }
 }

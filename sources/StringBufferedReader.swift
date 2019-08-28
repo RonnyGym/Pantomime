@@ -6,27 +6,27 @@
 import Foundation
 
 /**
-* Uses a string as a stream and reads it line by line.
-*/
+ * Uses a string as a stream and reads it line by line.
+ */
 
 open class StringBufferedReader: BufferedReader {
-    var _buffer: [String]
-    var _line: Int
-
-    public init(string: String) {
-        _line = 0
-        _buffer = string.components(separatedBy: CharacterSet.newlines)
+  var _buffer: [String]
+  var _line: Int
+  
+  public init(string: String) {
+    _line = 0
+    _buffer = string.components(separatedBy: CharacterSet.newlines)
+  }
+  
+  open func close() {
+  }
+  
+  open func readLine() -> String? {
+    if _buffer.isEmpty || _buffer.count <= _line {
+      return nil
     }
-
-    open func close() {
-    }
-
-    open func readLine() -> String? {
-        if _buffer.isEmpty || _buffer.count <= _line {
-            return nil
-        }
-        let result = _buffer[_line]
-        _line += 1
-        return result
-    }
+    let result = _buffer[_line]
+    _line += 1
+    return result
+  }
 }

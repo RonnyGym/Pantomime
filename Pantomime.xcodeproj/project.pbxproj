@@ -22,8 +22,8 @@
 		5ED0328A1D6F1731006DE1F3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */; };
 		5ED0328B1D6F1734006DE1F3 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */; };
 		5ED0328C1D6F1735006DE1F3 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */; };
-		5ED0328F1D6F17BF006DE1F3 /* media2.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5ED0328D1D6F17BF006DE1F3 /* media2.m3u8 */; };
-		5ED032901D6F17BF006DE1F3 /* media.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5ED0328E1D6F17BF006DE1F3 /* media.m3u8 */; };
+		5ED0328F1D6F17BF006DE1F3 /* media_v.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5ED0328D1D6F17BF006DE1F3 /* media_v.m3u8 */; };
+		5ED032901D6F17BF006DE1F3 /* media_a.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5ED0328E1D6F17BF006DE1F3 /* media_a.m3u8 */; };
 		5ED032921D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032911D6F7539006DE1F3 /* MasterPlaylist.swift */; };
 		5ED032931D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032911D6F7539006DE1F3 /* MasterPlaylist.swift */; };
 		5ED032941D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032911D6F7539006DE1F3 /* MasterPlaylist.swift */; };
@@ -77,8 +77,8 @@
 		5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaPlaylist.swift; path = sources/MediaPlaylist.swift; sourceTree = "<group>"; };
 		5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = sources/StringExtensions.swift; sourceTree = "<group>"; };
 		5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamReader.swift; path = sources/StreamReader.swift; sourceTree = "<group>"; };
-		5ED0328D1D6F17BF006DE1F3 /* media2.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = media2.m3u8; sourceTree = "<group>"; };
-		5ED0328E1D6F17BF006DE1F3 /* media.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = media.m3u8; sourceTree = "<group>"; };
+		5ED0328D1D6F17BF006DE1F3 /* media_v.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = media_v.m3u8; sourceTree = "<group>"; };
+		5ED0328E1D6F17BF006DE1F3 /* media_a.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = media_a.m3u8; sourceTree = "<group>"; };
 		5ED032911D6F7539006DE1F3 /* MasterPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterPlaylist.swift; path = sources/MasterPlaylist.swift; sourceTree = "<group>"; };
 		5ED032951D6F7618006DE1F3 /* master.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master.m3u8; sourceTree = "<group>"; };
 		7FBCA03857771FD1265B089F /* FileBufferedReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileBufferedReader.swift; path = sources/FileBufferedReader.swift; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				5ED032951D6F7618006DE1F3 /* master.m3u8 */,
-				5ED0328D1D6F17BF006DE1F3 /* media2.m3u8 */,
-				5ED0328E1D6F17BF006DE1F3 /* media.m3u8 */,
+				5ED0328D1D6F17BF006DE1F3 /* media_v.m3u8 */,
+				5ED0328E1D6F17BF006DE1F3 /* media_a.m3u8 */,
 				9EDCE3F51C09D211002FA4A7 /* Info.plist */,
 				9EDCE3F31C09D211002FA4A7 /* PantomimeTests.swift */,
 				7FBCA10A0EB4EAA0CD4AB5EF /* ReaderTests.swift */,
@@ -364,9 +364,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ED0328F1D6F17BF006DE1F3 /* media2.m3u8 in Resources */,
+				5ED0328F1D6F17BF006DE1F3 /* media_v.m3u8 in Resources */,
 				5ED032961D6F7618006DE1F3 /* master.m3u8 in Resources */,
-				5ED032901D6F17BF006DE1F3 /* media.m3u8 in Resources */,
+				5ED032901D6F17BF006DE1F3 /* media_a.m3u8 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

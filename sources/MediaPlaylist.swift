@@ -5,45 +5,48 @@
 
 import Foundation
 
+public typealias Resolution = (width: Int, height: Int)
+
 open class MediaPlaylist {
-    open weak var masterPlaylist: MasterPlaylist?
-
-    open var programId: Int = 0
-    open var bandwidth: Int = 0
-    open var path: String?
-    open var version: Int?
-    open var targetDuration: Int?
-    open var mediaSequence: Int?
-    var segments = [MediaSegment]()
-
-    public init() {
-
+  open weak var masterPlaylist: MasterPlaylist?
+  
+  open var programId: Int = 0
+  open var bandwidth: Double = 0
+  open var resolution: Resolution?
+  open var path: String?
+  open var version: Int?
+  open var targetDuration: Int?
+  open var mediaSequence: Int?
+  var segments = [MediaSegment]()
+  
+  public init() {
+    
+  }
+  
+  open func addSegment(_ segment: MediaSegment) {
+    segments.append(segment)
+  }
+  
+  open func getSegment(_ index: Int) -> MediaSegment? {
+    if index >= segments.count {
+      return nil
     }
-
-    open func addSegment(_ segment: MediaSegment) {
-        segments.append(segment)
+    return segments[index]
+  }
+  
+  open func getSegmentCount() -> Int {
+    return segments.count
+  }
+  
+  open func duration() -> Float {
+    var dur: Float = 0.0
+    for item in segments {
+      dur += item.duration!
     }
-
-    open func getSegment(_ index: Int) -> MediaSegment? {
-        if index >= segments.count {
-            return nil
-        }
-        return segments[index]
-    }
-
-    open func getSegmentCount() -> Int {
-        return segments.count
-    }
-
-    open func duration() -> Float {
-        var dur: Float = 0.0
-        for item in segments {
-            dur += item.duration!
-        }
-        return dur
-    }
-
-    open func getMaster() -> MasterPlaylist? {
-        return self.masterPlaylist
-    }
+    return dur
+  }
+  
+  open func getMaster() -> MasterPlaylist? {
+    return self.masterPlaylist
+  }
 }
