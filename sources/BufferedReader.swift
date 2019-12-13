@@ -7,7 +7,7 @@ import Foundation
 
 public protocol BufferedReader {
   func close()
-  
+
   // Return next line or nil if no more lines can be read
   func readLine() -> String?
 }

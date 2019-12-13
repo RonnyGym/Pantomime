@@ -12,7 +12,7 @@ import Foundation
 open class URLBufferedReader: BufferedReader {
   var _uri: URL
   var _stringReader: StringBufferedReader
-  
+
   public init(uri: URL) {
     _uri = uri
     _stringReader = StringBufferedReader(string: "")
@@ -26,13 +26,13 @@ open class URLBufferedReader: BufferedReader {
       print("Failed to make request for content at \(_uri)")
     }
   }
-  
+
   open func close() {
     _stringReader.close()
   }
-  
+
   open func readLine() -> String? {
     return _stringReader.readLine()
   }
-  
+
 }
