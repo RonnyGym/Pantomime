@@ -11,65 +11,65 @@ import Foundation
  */
 open class ManifestBuilder {
   public init() {}
-  
+
   /**
    * Parses Master playlist manifests
    */
   fileprivate func parseMasterPlaylist(_ reader: BufferedReader, onMediaPlaylist: ((_ playlist: MediaPlaylist) -> Void)?) -> MasterPlaylist {
     var masterPlaylist = MasterPlaylist()
     var currentMediaPlaylist: MediaPlaylist?
-    
+
     defer {
       reader.close()
     }
-    
+
     while let line = reader.readLine() {
       guard !line.isEmpty else {
         continue
       }
-      
+
       if line.hasPrefix("#EXT") {
         if line.hasPrefix("#EXT-X-STREAM-INF") {
           // #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2757000,RESOLUTION=1280x720,CODECS="avc1.4d001f,mp4a.40.2",AUDIO="audio-0"
           currentMediaPlaylist = MediaPlaylist()
-          
+
           guard let mediaPLInfo = line.split(separator: ":").last?.split(separator: ",").map({ sub -> (key: String, value: String) in
             let kv = sub.split(separator: "=")
-            
+
             guard kv.count == 2 else {
               print("Failed to parse program-id and bandwidth on master playlist. Line = \(line)")
-              
+
               return ("", "")
             }
-            
+
             guard let key = kv.first?.trimmingCharacters(in: .whitespaces), let value = kv.last?.trimmingCharacters(in: .whitespaces) else {
               print("Failed to parse program-id and bandwidth on master playlist. Line = \(line)")
-              
+
               return ("", "")
             }
-            
+
             return (String(key), String(value))
           }) else {
             print("Failed to parse program-id and bandwidth on master playlist. Line = \(line)")
-            
+
             continue
           }
-          
+
           if let programIdString = mediaPLInfo.first(where: { $0.key == "PROGRAM-ID" })?.value, let programId = Int(programIdString) {
             currentMediaPlaylist?.programId = programId
           } else {
             print("Failed to parse program-id on master playlist. Line = \(line)")
           }
-          
+
           if let bandwidthString = mediaPLInfo.first(where: { $0.key == "BANDWIDTH" })?.value, let bandwidth = Double(bandwidthString) {
             currentMediaPlaylist?.bandwidth = bandwidth
           } else {
             print("Failed to parse bandwidth on master playlist. Line = \(line)")
           }
-          
+
           if let resolutionString = mediaPLInfo.first(where: { $0.key == "RESOLUTION" })?.value {
             let widthHeight = resolutionString.split(separator: "x")
-            
+
             if let widthString = widthHeight.first, let width = Int(String(widthString)), let heightString = widthHeight.last, let height = Int(String(heightString)) {
               currentMediaPlaylist?.resolution = Resolution(width: width, height: height)
             }
@@ -82,45 +82,45 @@ open class ManifestBuilder {
           currentMediaPlaylistExist.path = line
           currentMediaPlaylistExist.masterPlaylist = masterPlaylist
           masterPlaylist.addPlaylist(currentMediaPlaylistExist)
-          
+
           if let callableOnMediaPlaylist = onMediaPlaylist {
             callableOnMediaPlaylist(currentMediaPlaylistExist)
           }
         }
       }
     }
-    
+
     return masterPlaylist
   }
-  
+
   private func parseMediaPlaylistExtXKey(_ line: String) -> XKey? {
     // #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://twelve",KEYFORMAT="com.apple.streamingkeydelivery",
     //   KEYFORMATVERSIONS="1"
     // #EXT-X-KEY:METHOD=AES-128,URI="https://my-host/?foo=bar",IV="0x0123456789ABCDEF"
-    
+
     guard let parametersString = try? line.replace("#EXT-X-KEY:", replacement: "") else {
       print("Failed to parse X-KEY on media playlist. Line = \(line)")
       return nil
     }
-    
+
     return parseExtXKey(parametersString)
   }
-  
+
   private func parseExtXKey(_ parametersString: String) -> XKey? {
     let parameters = parametersString.m3u8_parseLine()
-    
+
     guard let method = parameters["METHOD"],
       let uriString = parameters["URI"] else {
         return nil
     }
-    
+
     let iv = parameters["IV"]
     let keyFormat = parameters["KEYFORMAT"]
     let keyFormatVersions = parameters["KEYFORMATVERSIONS"]
-    
+
     return XKey(method: method, uri: uriString, iv: iv, keyFormat: keyFormat, keyFormatVersions: keyFormatVersions)
   }
-  
+
   /**
    * Parses Media Playlist manifests
    */
@@ -129,39 +129,39 @@ open class ManifestBuilder {
     var currentSegment: MediaSegment?
     var currentURI: String?
     var currentSequence = 0
-    
+
     defer {
       reader.close()
     }
-    
+
     while let line = reader.readLine() {
       guard !line.isEmpty else {
         continue
       }
-      
+
       if line.hasPrefix("#EXT") {
         if line.hasPrefix("#EXT-X-VERSION") {
           do {
             let version = try line.replace("(.*):(\\d+)(.*)", replacement: "$2")
-            
+
             mediaPlaylist.version = Int(version)
           } catch {
             print("Failed to parse the version of media playlist. Line = \(line)")
           }
-          
+
         } else if line.hasPrefix("#EXT-X-TARGETDURATION") {
           do {
             let durationString = try line.replace("(.*):(\\d+)(.*)", replacement: "$2")
-            
+
             mediaPlaylist.targetDuration = Int(durationString)
           } catch {
             print("Failed to parse the target duration of media playlist. Line = \(line)")
           }
-          
+
         } else if line.hasPrefix("#EXT-X-MEDIA-SEQUENCE") {
           do {
             let mediaSequence = try line.replace("(.*):(\\d+)(.*)", replacement: "$2")
-            
+
             if let mediaSequenceExtracted = Int(mediaSequence) {
               mediaPlaylist.mediaSequence = mediaSequenceExtracted
               currentSequence = mediaSequenceExtracted
@@ -169,14 +169,14 @@ open class ManifestBuilder {
           } catch {
             print("Failed to parse the media sequence in media playlist. Line = \(line)")
           }
-          
+
         } else if line.hasPrefix("#EXTINF") {
           currentSegment = MediaSegment()
-          
+
           do {
             let segmentDurationString = try line.replace("(.*):(\\d.*),(.*)", replacement: "$2")
             let segmentTitle = try line.replace("(.*):(\\d.*),(.*)", replacement: "$3")
-            
+
             currentSegment!.duration = Float(segmentDurationString)
             currentSegment!.title = segmentTitle
           } catch {
@@ -187,7 +187,7 @@ open class ManifestBuilder {
             do {
               let subrangeLength = try line.replace("(.*):(\\d.*)@(.*)", replacement: "$2")
               let subrangeStart = try line.replace("(.*):(\\d.*)@(.*)", replacement: "$3")
-              
+
               currentSegment!.subrangeLength = Int(subrangeLength)
               currentSegment!.subrangeStart = Int(subrangeStart)
             } catch {
@@ -196,7 +196,7 @@ open class ManifestBuilder {
           } else {
             do {
               let subrangeLength = try line.replace("(.*):(\\d.*)", replacement: "$2")
-              
+
               currentSegment!.subrangeLength = Int(subrangeLength)
               currentSegment!.subrangeStart = nil
             } catch {
@@ -208,10 +208,10 @@ open class ManifestBuilder {
         } else if line.hasPrefix("#EXT-X-KEY") {
           xKey = parseMediaPlaylistExtXKey(line)
         }
-        
+
       } else if line.hasPrefix("#") {
         // Comments are ignored
-        
+
       } else {
         // URI - must be
         if let currentSegmentExists = currentSegment {
@@ -221,17 +221,17 @@ open class ManifestBuilder {
           currentSegmentExists.xKey = xKey
           currentSequence += 1
           mediaPlaylist.addSegment(currentSegmentExists)
-          
+
           if let callableOnMediaSegment = onMediaSegment {
             callableOnMediaSegment(currentSegmentExists)
           }
         }
       }
     }
-    
+
     return mediaPlaylist
   }
-  
+
   /**
    * Parses the master playlist manifest from a string document.
    *
@@ -241,7 +241,7 @@ open class ManifestBuilder {
     ((_ playlist: MediaPlaylist) -> Void)? = nil) -> MasterPlaylist {
     return parseMasterPlaylist(StringBufferedReader(string: string), onMediaPlaylist: onMediaPlaylist)
   }
-  
+
   /**
    * Parses the master playlist manifest from a file.
    *
@@ -251,7 +251,7 @@ open class ManifestBuilder {
     ((_ playlist: MediaPlaylist) -> Void)? = nil) -> MasterPlaylist {
     return parseMasterPlaylist(FileBufferedReader(path: path), onMediaPlaylist: onMediaPlaylist)
   }
-  
+
   /**
    * Parses the master playlist manifest requested synchronous from a URL
    *
@@ -261,7 +261,7 @@ open class ManifestBuilder {
     ((_ playlist: MediaPlaylist) -> Void)? = nil) -> MasterPlaylist {
     return parseMasterPlaylist(URLBufferedReader(uri: url), onMediaPlaylist: onMediaPlaylist)
   }
-  
+
   /**
    * Parses the media playlist manifest from a string document.
    *
@@ -273,7 +273,7 @@ open class ManifestBuilder {
     return parseMediaPlaylist(StringBufferedReader(string: string),
                               mediaPlaylist: mediaPlaylist, onMediaSegment: onMediaSegment)
   }
-  
+
   /**
    * Parses the media playlist manifest from a file document.
    *
@@ -285,7 +285,7 @@ open class ManifestBuilder {
     return parseMediaPlaylist(FileBufferedReader(path: path),
                               mediaPlaylist: mediaPlaylist, onMediaSegment: onMediaSegment)
   }
-  
+
   /**
    * Parses the media playlist manifest requested synchronous from a URL
    *
@@ -298,7 +298,7 @@ open class ManifestBuilder {
     return parseMediaPlaylist(URLBufferedReader(uri: url),
                               mediaPlaylist: mediaPlaylist, onMediaSegment: onMediaSegment)
   }
-  
+
   /**
    * Parses the master manifest found at the URL and all the referenced media playlist manifests recursively.
    */
@@ -309,7 +309,7 @@ open class ManifestBuilder {
     let master = parseMasterPlaylistFromURL(url, onMediaPlaylist: onMediaPlaylist)
     for playlist in master.playlists {
       if let path = playlist.path {
-        
+
         // Detect if manifests are referred to with protocol
         if path.hasPrefix("http") || path.hasPrefix("file") {
           // Full path used
