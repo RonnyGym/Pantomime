@@ -13,37 +13,25 @@
 		5ED032811D6F1710006DE1F3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */; };
 		5ED032821D6F1710006DE1F3 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */; };
 		5ED032831D6F1721006DE1F3 /* ManifestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032791D6F1710006DE1F3 /* ManifestBuilder.swift */; };
-		5ED032841D6F1722006DE1F3 /* ManifestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032791D6F1710006DE1F3 /* ManifestBuilder.swift */; };
 		5ED032851D6F1728006DE1F3 /* MediaSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327A1D6F1710006DE1F3 /* MediaSegment.swift */; };
-		5ED032861D6F1728006DE1F3 /* MediaSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327A1D6F1710006DE1F3 /* MediaSegment.swift */; };
-		5ED032871D6F172B006DE1F3 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */; };
 		5ED032881D6F172C006DE1F3 /* MediaPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327B1D6F1710006DE1F3 /* MediaPlaylist.swift */; };
 		5ED032891D6F1731006DE1F3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */; };
-		5ED0328A1D6F1731006DE1F3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327C1D6F1710006DE1F3 /* StringExtensions.swift */; };
-		5ED0328B1D6F1734006DE1F3 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */; };
 		5ED0328C1D6F1735006DE1F3 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0327D1D6F1710006DE1F3 /* StreamReader.swift */; };
 		5ED0328F1D6F17BF006DE1F3 /* media_v.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5ED0328D1D6F17BF006DE1F3 /* media_v.m3u8 */; };
 		5ED032901D6F17BF006DE1F3 /* media_a.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5ED0328E1D6F17BF006DE1F3 /* media_a.m3u8 */; };
 		5ED032921D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032911D6F7539006DE1F3 /* MasterPlaylist.swift */; };
 		5ED032931D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032911D6F7539006DE1F3 /* MasterPlaylist.swift */; };
-		5ED032941D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED032911D6F7539006DE1F3 /* MasterPlaylist.swift */; };
 		5ED032961D6F7618006DE1F3 /* master.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5ED032951D6F7618006DE1F3 /* master.m3u8 */; };
 		7FBCA08CA592BD0DC04B8FE5 /* StringBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA22C61E0D299DF542F4B /* StringBufferedReader.swift */; };
-		7FBCA092389AE5D6DF3A72EB /* ReaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAFFB2E9DF6E75D5AF46D /* ReaderBuilder.swift */; };
 		7FBCA48C54BDA0AB70B73393 /* FileBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA03857771FD1265B089F /* FileBufferedReader.swift */; };
-		7FBCA552A6090C2DF269D9E9 /* NSURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA9CB6FB8AA516DB9C538 /* NSURLExtension.swift */; };
-		7FBCA65DDE8C32438FE4E9C8 /* FileBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA03857771FD1265B089F /* FileBufferedReader.swift */; };
 		7FBCA6A7E5981681AB2E5E48 /* ReaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAFFB2E9DF6E75D5AF46D /* ReaderBuilder.swift */; };
 		7FBCA81E63E9441F3AC22BB7 /* ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA10A0EB4EAA0CD4AB5EF /* ReaderTests.swift */; };
 		7FBCA8DD1928C9CD881780F6 /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAAE76466B9E53DA130F3 /* BufferedReader.swift */; };
-		7FBCAB4AB49726BF5F8EB6C8 /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAAE76466B9E53DA130F3 /* BufferedReader.swift */; };
 		7FBCABD199BB1B8440EC750E /* FileBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA03857771FD1265B089F /* FileBufferedReader.swift */; };
 		7FBCABE9DE7114831052FA9D /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAAE76466B9E53DA130F3 /* BufferedReader.swift */; };
 		7FBCAC77789A6B78BFB3B2BE /* ReaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAFFB2E9DF6E75D5AF46D /* ReaderBuilder.swift */; };
-		7FBCACF2178BC111C07423B5 /* URLBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAAA79D01BF5CEBA7261A /* URLBufferedReader.swift */; };
 		7FBCAD486D18CBDBCA89C3F6 /* NSURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA9CB6FB8AA516DB9C538 /* NSURLExtension.swift */; };
 		7FBCAD4D0E61F2913881E262 /* PlaylistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAFC77C9DA4C80FAEA0C2 /* PlaylistTests.swift */; };
-		7FBCAD932FF257481CDB95DE /* StringBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA22C61E0D299DF542F4B /* StringBufferedReader.swift */; };
 		7FBCADB79746F44D9AC5F47C /* URLBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCAAA79D01BF5CEBA7261A /* URLBufferedReader.swift */; };
 		7FBCAE6AB452BA202FB48490 /* NSURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA9CB6FB8AA516DB9C538 /* NSURLExtension.swift */; };
 		7FBCAEE343068A84C3A08C26 /* StringBufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCA22C61E0D299DF542F4B /* StringBufferedReader.swift */; };
@@ -54,11 +42,8 @@
 		9EDCE3F41C09D211002FA4A7 /* PantomimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDCE3F31C09D211002FA4A7 /* PantomimeTests.swift */; };
 		ACE5978F1C18830D0031451F /* Pantomime.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9E6CAA471C148EC1009D9093 /* Pantomime.podspec */; };
 		ACE597901C18830D0031451F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E6CAA491C149579009D9093 /* LICENSE */; };
-		ACE597A01C18832E0031451F /* Pantomime.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9E6CAA471C148EC1009D9093 /* Pantomime.podspec */; };
-		ACE597A11C18832E0031451F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E6CAA491C149579009D9093 /* LICENSE */; };
 		D0E56DCC226A3B120069E9F8 /* XKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E56DCB226A3B120069E9F8 /* XKey.swift */; };
 		D0E56DCD226A3B120069E9F8 /* XKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E56DCB226A3B120069E9F8 /* XKey.swift */; };
-		D0E56DCE226A3B120069E9F8 /* XKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E56DCB226A3B120069E9F8 /* XKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +85,6 @@
 		9EDCE3F31C09D211002FA4A7 /* PantomimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantomimeTests.swift; sourceTree = "<group>"; };
 		9EDCE3F51C09D211002FA4A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACE597951C18830D0031451F /* Pantomime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pantomime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACE597A61C18832E0031451F /* Pantomime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pantomime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E56DCB226A3B120069E9F8 /* XKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XKey.swift; path = sources/XKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,13 +105,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ACE5978C1C18830D0031451F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ACE5979D1C18832E0031451F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,7 +155,6 @@
 				9EDCE3E41C09D211002FA4A7 /* Pantomime.framework */,
 				9EDCE3EE1C09D211002FA4A7 /* PantomimeTests.xctest */,
 				ACE597951C18830D0031451F /* Pantomime.framework */,
-				ACE597A61C18832E0031451F /* Pantomime.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,13 +184,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ACE5978D1C18830D0031451F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ACE5979E1C18832E0031451F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,24 +249,6 @@
 			productReference = ACE597951C18830D0031451F /* Pantomime.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		ACE597971C18832E0031451F /* Pantomime (OSX) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ACE597A31C18832E0031451F /* Build configuration list for PBXNativeTarget "Pantomime (OSX)" */;
-			buildPhases = (
-				ACE597981C18832E0031451F /* Sources */,
-				ACE5979D1C18832E0031451F /* Frameworks */,
-				ACE5979E1C18832E0031451F /* Headers */,
-				ACE5979F1C18832E0031451F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pantomime (OSX)";
-			productName = Pantomime;
-			productReference = ACE597A61C18832E0031451F /* Pantomime.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,17 +266,12 @@
 					};
 					9EDCE3ED1C09D211002FA4A7 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = W9ZVWEMJZF;
 						LastSwiftMigration = 1020;
+						ProvisioningStyle = Manual;
 					};
 					ACE597861C18830D0031451F = {
 						DevelopmentTeam = W9ZVWEMJZF;
 						LastSwiftMigration = 1020;
-					};
-					ACE597971C18832E0031451F = {
-						DevelopmentTeam = W9ZVWEMJZF;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -345,7 +291,6 @@
 				9EDCE3E31C09D211002FA4A7 /* Pantomime (iOS) */,
 				9EDCE3ED1C09D211002FA4A7 /* PantomimeTests */,
 				ACE597861C18830D0031451F /* Pantomime (tvOS) */,
-				ACE597971C18832E0031451F /* Pantomime (OSX) */,
 			);
 		};
 /* End PBXProject section */
@@ -379,15 +324,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACE5979F1C18832E0031451F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACE597A01C18832E0031451F /* Pantomime.podspec in Resources */,
-				ACE597A11C18832E0031451F /* LICENSE in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -402,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		9EB9C85B1C92C271005C0541 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -415,7 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -467,26 +403,6 @@
 				7FBCAEE343068A84C3A08C26 /* StringBufferedReader.swift in Sources */,
 				7FBCADB79746F44D9AC5F47C /* URLBufferedReader.swift in Sources */,
 				7FBCAD486D18CBDBCA89C3F6 /* NSURLExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ACE597981C18832E0031451F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5ED0328B1D6F1734006DE1F3 /* StreamReader.swift in Sources */,
-				5ED0328A1D6F1731006DE1F3 /* StringExtensions.swift in Sources */,
-				5ED032861D6F1728006DE1F3 /* MediaSegment.swift in Sources */,
-				D0E56DCE226A3B120069E9F8 /* XKey.swift in Sources */,
-				5ED032941D6F7539006DE1F3 /* MasterPlaylist.swift in Sources */,
-				5ED032841D6F1722006DE1F3 /* ManifestBuilder.swift in Sources */,
-				5ED032871D6F172B006DE1F3 /* MediaPlaylist.swift in Sources */,
-				7FBCAB4AB49726BF5F8EB6C8 /* BufferedReader.swift in Sources */,
-				7FBCA65DDE8C32438FE4E9C8 /* FileBufferedReader.swift in Sources */,
-				7FBCA092389AE5D6DF3A72EB /* ReaderBuilder.swift in Sources */,
-				7FBCAD932FF257481CDB95DE /* StringBufferedReader.swift in Sources */,
-				7FBCACF2178BC111C07423B5 /* URLBufferedReader.swift in Sources */,
-				7FBCA552A6090C2DF269D9E9 /* NSURLExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -605,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -624,6 +540,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W9ZVWEMJZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -631,8 +548,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.Pantomime;
+				MARKETING_VERSION = 0.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gymondo.Pantomime;
 				PRODUCT_NAME = Pantomime;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -647,6 +566,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W9ZVWEMJZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -654,8 +574,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.Pantomime;
+				MARKETING_VERSION = 0.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gymondo.Pantomime;
 				PRODUCT_NAME = Pantomime;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -668,11 +590,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				DEVELOPMENT_TEAM = W9ZVWEMJZF;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PantomimeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.PantomimeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gymondo.PantomimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -681,11 +607,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				DEVELOPMENT_TEAM = W9ZVWEMJZF;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PantomimeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.PantomimeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gymondo.PantomimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
@@ -696,6 +626,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W9ZVWEMJZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -705,13 +636,15 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.Pantomime;
+				MARKETING_VERSION = 0.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gymondo.Pantomime;
 				PRODUCT_NAME = Pantomime;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
@@ -721,6 +654,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W9ZVWEMJZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -730,70 +664,16 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.Pantomime;
+				MARKETING_VERSION = 0.1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = de.gymondo.Pantomime;
 				PRODUCT_NAME = Pantomime;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
-			};
-			name = Release;
-		};
-		ACE597A41C18832E0031451F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = W9ZVWEMJZF;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.Pantomime;
-				PRODUCT_NAME = Pantomime;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "i386 x86_64";
-			};
-			name = Debug;
-		};
-		ACE597A51C18832E0031451F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = W9ZVWEMJZF;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nordija.Pantomime;
-				PRODUCT_NAME = Pantomime;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -832,15 +712,6 @@
 			buildConfigurations = (
 				ACE597931C18830D0031451F /* Debug */,
 				ACE597941C18830D0031451F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ACE597A31C18832E0031451F /* Build configuration list for PBXNativeTarget "Pantomime (OSX)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ACE597A41C18832E0031451F /* Debug */,
-				ACE597A51C18832E0031451F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

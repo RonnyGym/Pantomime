@@ -12,15 +12,15 @@ import Foundation
 open class StringBufferedReader: BufferedReader {
   var _buffer: [String]
   var _line: Int
-  
+
   public init(string: String) {
     _line = 0
     _buffer = string.components(separatedBy: CharacterSet.newlines)
   }
-  
+
   open func close() {
   }
-  
+
   open func readLine() -> String? {
     if _buffer.isEmpty || _buffer.count <= _line {
       return nil
